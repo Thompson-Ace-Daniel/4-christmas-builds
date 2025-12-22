@@ -19,10 +19,13 @@ const themeSwitcher = () => {
 
 themeBtn.addEventListener("click", themeSwitcher);
 
-
 const menuController = () => {
-    dropdown.classList.toggle("disappear")
-    if (dropdown.classList.contains("disappear"))
-}
+  dropdown.classList.toggle("disappear");
+  if (dropdown.classList.contains("disappear")) {
+    menuBtn.innerHTML = "menu";
+  } else {
+    menuBtn.innerHTML = "arrow_down";
+  }
+};
 
-menuBtn.addEventListener("click", menuController)
+menuBtn.addEventListener("click", menuController);
