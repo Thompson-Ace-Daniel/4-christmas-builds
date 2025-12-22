@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1 id="title" title="Report Card"><a href="index.html">REPORT CARD</a></h1>
+            <div class="headerBtns">
+                <button type="button" class="menu material-symbols-outlined">menu</button>
+                <button type="button" class="theme-switcher material-symbols-outlined">sunny</button>
+                <button type="button" class="search material-symbols-outlined">search</button>
+            </div>
+        </div>
+        <div class="dropdown disappear">
+            <button>Home</button>
+            <button>About</button>
+            <button>Contact Us</button>
+        </div>
+    </header>
+    <main>
+        <table id="reportTable">
+            <thead>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Maths</th>
+                <th>Eng.</th>
+                <th>Sci.</th>
+                <th>Arts</th>
+                <th>Com.</th>
+                <th>Total</th>
+            </thead>
+            <tbody id="tBody">
+                <tr>
+                    <td>1.</td>
+                    <td>Jean</td>
+                    <td>90</td>
+                    <td>90</td>
+                    <td>60</td>
+                    <td>40</td>
+                    <td>70</td>
+                    <td>500</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        ParagonX Inc. &nbsp;&nbsp;<span>&copy; <span id="thisYear"></span>,&nbsp;&nbsp;All Rights Reserved.</span>
+    </footer>
+</body>
+
+</html>
