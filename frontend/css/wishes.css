@@ -88,11 +88,3 @@ input[type="text"], textarea {
     color: var(--color-red);
     font-weight: var(--bold);
 }
-
-footer {
-    margin-top: auto;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-white);
-}

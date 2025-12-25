@@ -13,7 +13,7 @@
     --section-height: 10vh;
     --def-height: 100vh;
     --full-width: 100%;
-    --full-vh: 100vw;
+    --full-vw: 100vw;
 
     /* FONTS */
     --sans-serif: 'Arial', sans-serif;
@@ -32,4 +32,13 @@
     text-decoration: none;
     list-style: none;
     outline: none;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-white);
+    height: calc(var(--def-height)) / 10;
 }
