@@ -5,6 +5,7 @@
     --color-gold: #ffd700;
     --color-white: #ffffff;
     --color-black: #000000;
+    --shadow-light: rgba(0, 0, 0, 0.1);
 
     /* SIZES */
     --default-size: 1rem;
@@ -21,4 +22,14 @@
     --bold: 700;
     --normal: 600;
     --light: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
 }

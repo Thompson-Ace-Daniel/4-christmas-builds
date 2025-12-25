@@ -9,11 +9,54 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="css/defaults.css">
     <link rel="stylesheet" href="css/wishes.css">
+    <script src="js/defaults.js" defer></script>
     <script src="js/wishes.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <h1>CHRISTMAS WISH MODULE</h1>
+    </header>
+    <main>
+        <section id="wish-form-section">
+            <h2>Submit Your Christmas Wish</h2>
+            <p>Greetings are also Accepted.</p>
+            <form id="wish-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+
+                <label id="wishLabel" for="wish">Wish / Greetings:</label>
+                <textarea id="wish" name="wish" rows="3" required></textarea>
+
+                <button type="submit">Submit Wish</button>
+            </form>
+        </section>
+
+        <section id="wishes-display-section">
+            <h2>Submitted Wishes from Around the World</h2>
+            <div id="wishes-container">
+                <!-- Wishes will be displayed here -->
+                <p>No wishes submitted yet.</p>
+                <div class="wish-card">
+                    <h3 class="wish-to">To: [Recipient's Name]</h3>
+                    <p class="wish-message">[Wish Message]</p>
+                    <p class="wish-from">From: [Sender's Name]</p>
+                    <p class="wish-date">25-12-2025 - 4:31PM</p>
+                </div>
+                <div class="wish-card">
+                    <h3 class="wish-to">To: [Recipient's Name]</h3>
+                    <p class="wish-message">[Wish Message]</p>
+                    <p class="wish-from">From: [Sender's Name]</p>
+                    <p class="wish-date">25-12-2025 - 4:31PM</p>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span class="current-date"></span> CHRISTMAS WISH MODULE. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

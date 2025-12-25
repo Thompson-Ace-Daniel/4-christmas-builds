@@ -9,11 +9,82 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="css/defaults.css">
     <link rel="stylesheet" href="css/users.css">
+    <script src="js/defaults.js" defer></script>
     <script src="js/users.js" defer></script>
 </head>
 
 <body>
+    <header></header>
+    <h1>ADMIN USER PANEL</h1>
+    </header>
+    <main>
+        <section id="users-section">
+            <div class="user-edit-panel">
+                <h2>Registered Users</h2>
+                <div class="btns">
+                    <button type="button" id="addBtn"><span class="material-symbols-outlined">add</span></button>
+                    <button type="button" id="editBtn"><span class="material-symbols-outlined">edit</span></button>
+                    <button type="button" id="searchBtn"><span class="material-symbols-outlined">search</span></button>
+                </div>
+            </div>
+            <div id="users-container">
+                <!-- User cards will be displayed here -->
+                <p>No users registered yet.</p>
+                <p>Click the '+' button to add a new user.</p>
 
+                <!-- Template for user card -->
+
+                <div class="user-card">
+                    <div class="user-select">
+                        <input type="checkbox" title="Select user" class="select-user-checkbox">
+                        <div class="user-info">
+                            <p class="user-name">Name: [User's Name]</p>
+                            <p class="user-email">Email: [User's Email]</p>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button type="button" class="edit-user-btn" title="Edit User"><span
+                                class="material-symbols-outlined">edit</span></button>
+                        <button type="button" class="delete-user-btn" title="Delete User"><span
+                                class="material-symbols-outlined">delete</span></button>
+                    </div>
+                </div>
+                <div class="user-card">
+                    <div class="user-select">
+                        <input type="checkbox" title="Select user" class="select-user-checkbox">
+                        <div class="user-info">
+                            <p class="user-name">Name: [User's Name]</p>
+                            <p class="user-email">Email: [User's Email]</p>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button type="button" class="edit-user-btn" title="Edit User"><span
+                                class="material-symbols-outlined">edit</span></button>
+                        <button type="button" class="delete-user-btn" title="Delete User"><span
+                                class="material-symbols-outlined">delete</span></button>
+                    </div>
+                </div>
+                <div class="user-card">
+                    <div class="user-select">
+                        <input type="checkbox" title="Select user" class="select-user-checkbox">
+                        <div class="user-info">
+                            <p class="user-name">Name: [User's Name]</p>
+                            <p class="user-email">Email: [User's Email]</p>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button type="button" class="edit-user-btn" title="Edit User"><span
+                                class="material-symbols-outlined">edit</span></button>
+                        <button type="button" class="delete-user-btn" title="Delete User"><span
+                                class="material-symbols-outlined">delete</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+<footer>
+    <p>&copy; <span class="current-date"></span> CHRISTMAS WISH MODULE. All rights reserved.</p>
+</footer>
 
 </html>

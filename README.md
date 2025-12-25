@@ -128,6 +128,7 @@ No overengineering. Just clean CRUD.
 │   │   ├── users.css
 │   │   └── messages.css
 │   └── js/
+│       ├── defaults.js
 │       ├── wishes.js
 │       ├── expenses.js
 │       ├── users.js
