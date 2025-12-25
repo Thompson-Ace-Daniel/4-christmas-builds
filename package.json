@@ -2,10 +2,10 @@
   "name": "report-card",
   "version": "1.0.0",
   "description": "This is a project that uses mongoose and mongodb to create projects. MERN Stack",
-  "main": "server.js",
+  "main": "backend/server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon backend/server.js"
   },
   "keywords": [
     "mongoose",
