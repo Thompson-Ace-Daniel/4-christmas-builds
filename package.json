@@ -1,5 +1,5 @@
 {
-  "name": "report-card",
+  "name": "4-christmas-builds",
   "version": "1.0.0",
   "description": "This is a project that uses mongoose and mongodb to create projects. MERN Stack",
   "main": "backend/server.js",
@@ -13,7 +13,7 @@
     "dotenv",
     "backend"
   ],
-  "author": "Thompson",
+  "author": "Thompson Daniel",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

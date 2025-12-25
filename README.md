@@ -122,7 +122,11 @@ No overengineering. Just clean CRUD.
 │   ├── users.html
 │   ├── feedback.html
 │   ├── css/
-|   |
+│   │   ├── defaults.css
+│   │   ├── wishes.css
+│   │   ├── expenses.css
+│   │   ├── users.css
+│   │   └── messages.css
 │   └── js/
 │       ├── wishes.js
 │       ├── expenses.js
@@ -138,7 +142,13 @@ No overengineering. Just clean CRUD.
 
 ## 🚀 How to Run the Project
 
-### 1. Start the Backend
+### 1. Configure your .env file in project root
+
+Add DATABASE_URL (MONGODB) and PORT (5000) to your .env file
+
+---
+
+### 2. Start the Backend
 
 ```bash
 npm run dev
@@ -215,4 +225,4 @@ Christmas build. Real constraints. Real learning.
 
 ---
 
-#2026 HERE I COME!!!
+### 2026 HERE I COME!!!

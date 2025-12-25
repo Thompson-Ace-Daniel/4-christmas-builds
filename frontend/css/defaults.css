@@ -1,0 +1,24 @@
+:root {
+    /* COLORS */
+    --color-red: #ff0000;
+    --color-green: #008000;
+    --color-gold: #ffd700;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* SIZES */
+    --default-size: 1rem;
+    --avg-size: 10px;
+    --section-height: 10vh;
+    --def-height: 100vh;
+    --full-width: 100%;
+    --full-vh: 100vw;
+
+    /* FONTS */
+    --sans-serif: 'Arial', sans-serif;
+    --serif: 'Times', serif;
+    --cursive: cursive;
+    --bold: 700;
+    --normal: 600;
+    --light: 500;
+}
