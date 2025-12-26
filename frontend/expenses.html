@@ -18,21 +18,73 @@
         <h1>CHRISTMAS EXPENSE TRACKER</h1>
     </header>
     <main>
-        <section class="messageDisplay">
-            <div class="messages">
-                <!-- Feedbacks From Users -->
-                <h3>Header: [Feeback Topic]</h3>
-                <p>Company In Review: [A Company]</p>
-                <p>Post: [Feedback Content]</p>
-                <p>Likes: [Likes Count]</p>
-                <p>Time: [When Posted]</p>
-                <button type="button" title="like">
-                    <span class="material-symbols-outlined">thumb_up</span>
-                </button>
-                <button type="button" title="comment">
-                    <span class="material-symbols-outlined">message</span>
-                </button>
-                <button type="button" title="share"><span class="material-symbols-outlined">share</span></button>
+            <form class="router">
+                <label for="daysExpense">Expenses for:</label>
+                <input type="date" name="daysExpense" id="daysExpense">
+    
+                <label for="daysIncome">Income of the day:</label>
+                <input type="number" name="daysIncome" id="daysIncome">
+    
+                <label for="incomeNote">Optional Area to Log Income Stream >></label>
+                <textarea name="incomeNote" id="incomeNote" rows="3"></textarea>
+
+                <button id="trackBtn" type="button">Track</button>
+            </form>
+        <section class="displaySection">
+            <div class="expenseTable">
+                <h2>Expenses for <span class="date">25-12-2025</span></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-tbody">
+                        <!-- Expense rows will be dynamically added here -->
+                        <tr>
+                            <td>11:04</td>
+                            <td>Fix Shoes</td>
+                            <td>Service</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>11:04</td>
+                            <td>Fix Shoes</td>
+                            <td>Service</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>11:04</td>
+                            <td>Fix Shoes</td>
+                            <td>Service</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>11:04</td>
+                            <td>Fix Shoes</td>
+                            <td>Service</td>
+                            <td>500</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total Expenditures</td>
+                            <td id="totalExpenditures">2000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="analysis">
+                    <p>
+                        <span>Today you</span>
+                        <span id="isProfit">made</span>:
+                        <span>$</span>
+                        <span id="calced">5000</span>
+                    </p>
+                    <p>Good Job, keep it up!</p>
+                </div>
             </div>
         </section>
         <div class="addSect">
@@ -40,7 +92,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; <span class="current-date"></span> CHRISTMAS WISH MODULE. All rights reserved.</p>
+        <p>&copy; <span class="current-date"></span> CHRISTMAS EXPENSE TRACKER. All rights reserved.</p>
     </footer>
 </body>
 

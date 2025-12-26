@@ -1,0 +1,117 @@
+body {
+  position: relative;
+  font-family: var(--cursive);
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  line-height: 1.6;
+  font-size: var(--default-size);
+  min-height: var(--def-height);
+  width: var(--full-width);
+  padding: var(--default-size) calc(var(--default-size) / 2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Times", serif;
+  font-weight: var(--bold);
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        justify-content: space-around;
+        width: var(--full-width);
+        align-items: center;
+    }
+}
+
+.addSect {
+  position: absolute;
+  bottom: calc(var(--def-height) / 6);
+  right: calc(var(--default-size) * 2);
+}
+
+.addSect button {
+  width: calc(var(--avg-size) * 5);
+  height: calc(var(--avg-size) * 5);
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.addSect button:hover {
+  filter: brightness(97%);
+  transform: scale(0.98);
+}
+
+.router {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avg-size);
+  margin: calc(var(--default-size) * 2) 0;
+}
+
+.router input,
+.router textarea,
+.router button {
+  padding: var(--avg-size);
+  border-radius: var(--avg-size);
+  border: 1px solid var(--color-black);
+}
+
+.router button {
+    background-color: var(--color-white);
+    filter: brightness(90%);
+    font-size: calc(var(--avg-size) * 1.5);
+}
+
+.router button:hover {
+    transform: scale(0.98) translateY(1px);
+}
+
+.analysis {
+    margin: var(--avg-size);
+    color: var(--color-green);
+    text-align: left;
+}
+
+.analysis-red {
+    color: var(--color-red);
+}
+
+footer {
+  color: var(--color-black) !important;
+}
+
+.expenseTable {
+    margin: var(--default-size) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.expenseTable h2 {
+    margin-bottom: var(--default-size);
+}
+
+.expenseTable table {
+    gap: 10px;
+    border-spacing: var(--avg-size);
+}
+
+.expenseTable table td, .expenseTable th {
+    padding: var(--avg-size);
+    border: 1px solid var(--color-black);
+    border-radius: var(--avg-size);
+}
