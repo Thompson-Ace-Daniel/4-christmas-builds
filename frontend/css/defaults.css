@@ -6,6 +6,7 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --shadow-light: rgba(0, 0, 0, 0.1);
+    --color-overlay: rgba(0, 0, 0, 0.7);
 
     /* SIZES */
     --default-size: 1rem;

@@ -7,6 +7,6 @@ const wishSchema = mongoose.Schema({
   time: { type: Date, required: true },
 });
 
-const wishModel = mongoose.Model("Wishes", wishSchema);
+const wishModel = mongoose.model("Wishes", wishSchema);
 
 export default wishModel;

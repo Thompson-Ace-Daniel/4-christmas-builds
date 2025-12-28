@@ -18,21 +18,22 @@
         <h1>CHRISTMAS EXPENSE TRACKER</h1>
     </header>
     <main>
-            <form class="router">
-                <label for="daysExpense">Expenses for:</label>
-                <input type="date" name="daysExpense" id="daysExpense">
-    
-                <label for="daysIncome">Income of the day:</label>
-                <input type="number" name="daysIncome" id="daysIncome">
-    
-                <label for="incomeNote">Optional Area to Log Income Stream >></label>
-                <textarea name="incomeNote" id="incomeNote" rows="3"></textarea>
+        <form class="router">
+            <label for="daysExpense">Expenses for:</label>
+            <input type="date" name="daysExpense" id="daysExpense" required>
 
-                <button id="trackBtn" type="button">Track</button>
-            </form>
+            <label for="daysIncome">Income of the day:</label>
+            <input type="number" name="daysIncome" id="daysIncome" required>
+
+            <label for="incomeNote">Optional Area to Log Income Stream >></label>
+            <textarea name="incomeNote" id="incomeNote" rows="3"></textarea>
+
+            <button id="trackBtn" type="button">Track</button>
+        </form>
         <section class="displaySection">
             <div class="expenseTable">
                 <h2>Expenses for <span class="date">25-12-2025</span></h2>
+                <p class="todaysIncome">TODAY'S INCOME: <span class="incomeStream">120000</span></p>
                 <table>
                     <thead>
                         <tr>
@@ -81,11 +82,34 @@
                         <span>Today you</span>
                         <span id="isProfit">made</span>:
                         <span>$</span>
-                        <span id="calced">5000</span>
+                        <span id="calced">5000</span>,
                     </p>
+                    <p>You have <span class="incomeLeft">118000</span> left.</p>
                     <p>Good Job, keep it up!</p>
                 </div>
             </div>
+        </section>
+        <section class="overlay overlay-out">
+            <form class="modal">
+                <div class="overlayHeader">
+                    <p>New Overlay</p>
+                    <button type="button" id="closeBtn"><span class="material-symbols-outlined">close</span></button>
+                </div>
+                <div class="modalForm">
+                    <input type="text" name="expense" id="expenseName" placeholder="Expense" maxlength="20" required>
+                    <input type="number" name="amount" id="expenseAmount" placeholder="Amount Spent" required>
+                    <select name="category" title="Expense Category" id="expenseCategory">
+                        <option value="">Select Expense Category</option>
+                        <option value="medical">Medical</option>
+                        <option value="digital">Digital</option>
+                        <option value="food">Food</option>
+                        <option value="bills">Bills</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea name="log" id="expenseLog" placeholder="Expense Log (Optional)"></textarea>
+                    <button type="button" class="sendBtn">Add</button>
+                </div>
+            </form>
         </section>
         <div class="addSect">
             <button type="button" class="addButton"><span class="material-symbols-outlined">add</span></button>

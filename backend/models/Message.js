@@ -8,6 +8,6 @@ const messageSchema = mongoose.Schema({
   time: { type: Date, required: true },
 });
 
-const messageModel = mongoose.Model("Message", messageSchema);
+const messageModel = mongoose.model("Message", messageSchema);
 
 export default messageModel;

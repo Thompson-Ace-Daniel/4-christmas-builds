@@ -1,8 +1,9 @@
 import express from 'express';
-import { wishes } from '../controllers/wishes.controller.js';
+import { wishesReq, wishesRes } from '../controllers/wishes.controller.js';
 
 const router = express.Router();
 
-router.post('/wishes', wishes);
+router.post('/wishes', wishesReq);
+router.get('/wishes', wishesRes);
 
 export default router;

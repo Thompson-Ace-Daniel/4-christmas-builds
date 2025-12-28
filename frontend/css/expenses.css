@@ -23,12 +23,12 @@ h3 {
 }
 
 @media screen and (min-width: 900px) {
-    main {
-        display: flex;
-        justify-content: space-around;
-        width: var(--full-width);
-        align-items: center;
-    }
+  main {
+    display: flex;
+    justify-content: space-around;
+    width: var(--full-width);
+    align-items: center;
+  }
 }
 
 .addSect {
@@ -46,6 +46,8 @@ h3 {
   justify-content: center;
   align-items: center;
   background-color: var(--color-white);
+  -webkit-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -63,30 +65,37 @@ h3 {
 
 .router input,
 .router textarea,
-.router button {
+.router button,
+.modalForm input,
+.modalForm select,
+.modalForm textarea,
+.modalForm .sendBtn {
   padding: var(--avg-size);
   border-radius: var(--avg-size);
   border: 1px solid var(--color-black);
 }
 
-.router button {
-    background-color: var(--color-white);
-    filter: brightness(90%);
-    font-size: calc(var(--avg-size) * 1.5);
+.router button, .modalForm .sendBtn {
+  background-color: var(--color-white);
+  filter: brightness(90%);
+  font-size: calc(var(--avg-size) * 1.5);
+  cursor: pointer;
 }
 
-.router button:hover {
-    transform: scale(0.98) translateY(1px);
+.router button:hover, .modalForm .sendBtn:hover {
+  transform: scale(0.98) translateY(1px);
 }
 
 .analysis {
-    margin: var(--avg-size);
-    color: var(--color-green);
-    text-align: left;
+  margin: var(--avg-size);
+  color: var(--color-green);
+  text-align: left;
+  width: var(--full-width);
+  padding: var(--avg-size);
 }
 
 .analysis-red {
-    color: var(--color-red);
+  color: var(--color-red);
 }
 
 footer {
@@ -94,24 +103,93 @@ footer {
 }
 
 .expenseTable {
-    margin: var(--default-size) 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  margin: var(--default-size) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .expenseTable h2 {
-    margin-bottom: var(--default-size);
+  margin-bottom: var(--default-size);
 }
 
 .expenseTable table {
-    gap: 10px;
-    border-spacing: var(--avg-size);
+  gap: 10px;
+  border-spacing: var(--avg-size);
 }
 
-.expenseTable table td, .expenseTable th {
-    padding: var(--avg-size);
-    border: 1px solid var(--color-black);
-    border-radius: var(--avg-size);
+.expenseTable table td,
+.expenseTable th {
+  padding: var(--avg-size);
+  border: 1px solid var(--color-black);
+  border-radius: var(--avg-size);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2222;
+  width: var(--full-width);
+  height: var(--def-height);
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-overlay);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-white);
+  padding: var(--default-size);
+  border: 1px solid var(--color-black);
+  min-width: 400px;
+  min-height: 300px;
+  color: var(--color-black);
+  border-radius: var(--default-size);
+  gap: var(--avg-size);
+}
+
+.overlayHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--default-size);
+}
+
+.overlay-out {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlayHeader p, .overlay span {
+  font-size: calc((var(--default-size)) * 1.2 );
+  font-weight: var(--bold);
+}
+
+.overlayHeader button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modalForm {
+  width: calc(var(--full-width) * 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: var(--avg-size);
+  margin: calc(var(--default-size) * 2) 0;
+  justify-self: center;
+}
+
+.todaysIncome {
+  font-size: calc(var(--avg-size) * 1.5);
+  font-weight: var(--bold);
+  margin-bottom: var(--avg-size);
 }
