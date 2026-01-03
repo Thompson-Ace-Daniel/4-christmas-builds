@@ -13,72 +13,51 @@
     <script src="js/users.js" defer></script>
 </head>
 
+
+<div class="modalHolder hidden">
+    <section class="modal">
+        <form>
+            <p>Are you sure you want to delete all users?</p>
+            <div class="decision">
+                <button type="button" id="cancelBtn">Cancel</button>
+                <button type="button" id="confirmBtn">Confirm</button>
+            </div>
+        </form>
+    </section>
+</div>
+
 <body>
-    <header></header>
-    <h1>ADMIN USER PANEL</h1>
+    <header>
+        <h1>ADMIN USER PANEL</h1>
     </header>
     <main>
         <section id="users-section">
             <div class="user-edit-panel">
                 <h2>Registered Users</h2>
                 <div class="btns">
-                    <button type="button" id="addBtn"><span class="material-symbols-outlined">add</span></button>
-                    <button type="button" id="editBtn"><span class="material-symbols-outlined">edit</span></button>
-                    <button type="button" id="searchBtn"><span class="material-symbols-outlined">search</span></button>
+                    <button type="button" id="addBtn" title="Add user"><span
+                            class="material-symbols-outlined">add</span></button>
+                    <button type="button" id="deleteBtn" title="Delete Users"><span
+                            class="material-symbols-outlined">delete</span></button>
+                    <button type="button" id="reloadBtn" title="Refresh"><span
+                            class="material-symbols-outlined">refresh</span></button>
                 </div>
             </div>
+            <section class="inputSect hidden">
+                <form>
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div><button type="button" id="sendBtn"><span class="material-symbols-outlined">add</span></button>
+                    </div>
+                </form>
+            </section>
+            <div id="totalDiv"><p>Total Users: <span id="total"></span></p></div>
             <div id="users-container">
                 <!-- User cards will be displayed here -->
                 <p>No users registered yet.</p>
                 <p>Click the '+' button to add a new user.</p>
-
-                <!-- Template for user card -->
-
-                <div class="user-card">
-                    <div class="user-select">
-                        <input type="checkbox" title="Select user" class="select-user-checkbox">
-                        <div class="user-info">
-                            <p class="user-name">Name: [User's Name]</p>
-                            <p class="user-email">Email: [User's Email]</p>
-                        </div>
-                    </div>
-                    <div class="user-actions">
-                        <button type="button" class="edit-user-btn" title="Edit User"><span
-                                class="material-symbols-outlined">edit</span></button>
-                        <button type="button" class="delete-user-btn" title="Delete User"><span
-                                class="material-symbols-outlined">delete</span></button>
-                    </div>
-                </div>
-                <div class="user-card">
-                    <div class="user-select">
-                        <input type="checkbox" title="Select user" class="select-user-checkbox">
-                        <div class="user-info">
-                            <p class="user-name">Name: [User's Name]</p>
-                            <p class="user-email">Email: [User's Email]</p>
-                        </div>
-                    </div>
-                    <div class="user-actions">
-                        <button type="button" class="edit-user-btn" title="Edit User"><span
-                                class="material-symbols-outlined">edit</span></button>
-                        <button type="button" class="delete-user-btn" title="Delete User"><span
-                                class="material-symbols-outlined">delete</span></button>
-                    </div>
-                </div>
-                <div class="user-card">
-                    <div class="user-select">
-                        <input type="checkbox" title="Select user" class="select-user-checkbox">
-                        <div class="user-info">
-                            <p class="user-name">Name: [User's Name]</p>
-                            <p class="user-email">Email: [User's Email]</p>
-                        </div>
-                    </div>
-                    <div class="user-actions">
-                        <button type="button" class="edit-user-btn" title="Edit User"><span
-                                class="material-symbols-outlined">edit</span></button>
-                        <button type="button" class="delete-user-btn" title="Delete User"><span
-                                class="material-symbols-outlined">delete</span></button>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

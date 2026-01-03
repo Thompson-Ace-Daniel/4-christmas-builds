@@ -1,8 +1,6 @@
 import express from 'express';
 import wishModel from '../models/Wish.js';
 
-const app = express();
-
 const wishesReq = async (req, res) => {
     try {
         const createdReq = req.body;

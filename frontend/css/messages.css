@@ -12,6 +12,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow-x: hidden;
+}
+
+body::selection {
+  background-color: var(--color-green);
+  color: var(--color-white);
 }
 
 header {
@@ -24,7 +30,7 @@ main {
 
 .addSect {
   position: fixed;
-  bottom: calc((var(--def-height) / 10) - (var(--avg-size) * 0.25));
+  bottom: calc((var(--def-height) / 10) - (var(--avg-size) * 0.1));
   left: 0;
   width: var(--full-width);
   background-color: var(--color-green);
@@ -37,14 +43,22 @@ main {
   border-bottom: 2px solid var(--color-white);
 }
 
-.addSect input {
+.addSect textarea {
   flex: 1;
+  color: var(--color-black);
   padding: var(--avg-size);
   border-radius: var(--avg-size);
   border: 1px solid var(--color-black);
   margin: 0 var(--default-size);
+  line-height: 1.2;
   font-size: var(--default-size);
-  font-weight: var(--normal);
+  font-weight: var(--light);
+  padding-right: calc(var(--default-size) * 3.5);
+  resize: none;
+}
+
+.addSect textarea::-webkit-scrollbar {
+  display: none;
 }
 
 .addSect button {
@@ -138,4 +152,10 @@ footer {
   bottom: 0;
   background-color: var(--color-red);
   width: var(--full-vw);
+  height: calc(var(--def-height) / 10);
+  font-size: clamp(
+    var(--avg-size),
+    calc(var(--avg-size) * 1.3),
+    var(--default-size)
+  );
 }

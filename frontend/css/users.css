@@ -1,108 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    line-height: 1.6;
-    font-size: var(--default-size);
-    min-height: var(--def-height);
-    width: var(--full-width);
-    padding: var(--default-size) calc(var(--default-size) / 2);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  line-height: 1.6;
+  font-size: var(--default-size);
+  min-height: var(--def-height);
+  width: var(--full-width);
+  padding: var(--default-size) calc(var(--default-size) / 2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-    font-family: 'Times', serif;
-    font-weight: var(--bold);
+h1,
+h2,
+h3 {
+  font-family: "Times", serif;
+  font-weight: var(--bold);
 }
 
 #users-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: calc(var(--default-size) / 4);
-    margin: var(--default-size) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: calc(var(--default-size) / 4);
+  margin: var(--default-size) 0;
 }
 
 #users-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: var(--default-size);
-    margin-top: calc(var(--default-size) * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: var(--default-size);
+  margin-top: calc(var(--default-size) * 2);
 }
 
 .btns {
-    display: flex;
-    gap: calc(var(--default-size) / 2);
+  display: flex;
+  gap: calc(var(--default-size) / 2);
 }
 
 .btns button {
-    background-color: var(--color-blue);
-    border: none;
-    color: var(--color-white);
-    width: 50px;
-    height: 50px;
-    padding: calc(var(--default-size) / 4);
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--default-size);
-    font-weight: var(--bold);
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-white);
+  width: 50px;
+  height: 50px;
+  padding: calc(var(--default-size) / 4);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--default-size);
+  font-weight: var(--bold);
 }
 
 .btns button:hover {
-    filter: brightness(90%);
-    border: 1px solid var(--color-white);
+  filter: brightness(90%);
+  border: 1px solid var(--color-white);
 }
 
 .user-card {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-black);
-    border-radius: 10px;
-    padding: calc(var(--default-size) / 2) var(--default-size);
-    color: var(--color-black);
-    margin: 1rem 0;
-    width: 80%;
-    height: 80px;
-    box-shadow: 0 4px 8px var(--shadow-light);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--default-size);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 10px;
+  padding: calc(var(--default-size) / 2) var(--default-size);
+  color: var(--color-black);
+  margin: 1rem 0;
+  width: 80%;
+  height: 80px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--default-size);
 }
 
 .user-card button {
-    color: var(--color-black);
-    border: 1px solid var(--color-black);
-    padding: 0.5rem;
-    cursor: pointer;
-    font-size: var(--avg-size);
-    font-weight: var(--bold);
-    border-radius: 5px;
-    display: flex;
-    align-items: flex-end;
-    justify-self: flex-end;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: var(--avg-size);
+  font-weight: var(--bold);
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-self: flex-end;
 }
 
 .user-card button:hover {
-    background-color: var(--color-black);
-    color: var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 .user-select {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--default-size);
-    flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--default-size);
+  flex: 1;
 }
 /* 
 .user-select:checked {
@@ -110,43 +114,233 @@ h1, h2, h3 {
 } */
 
 .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 550px) {
+  .user-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex: 1;
     justify-content: space-between;
-    align-items: flex-start;
+    text-align: center;
+    margin-left: var(--default-size);
+  }
 }
 
-@media screen and (min-width: 768px) {
-    .user-info {
-        display: flex;
-        flex-direction: row;
-        flex: 1;
-        gap: var(--default-size);
-        justify-content: space-evenly;
-    }
+@media screen and (max-width: 770px) {
+  .user-card {
+    justify-content: center;
+    font-size: calc(var(--default-size) * 0.8);
+  }
+  .user-info {
+    justify-content: space-between;
+  }
+  .user-select {
+    justify-content: flex-start;
+  }
+  /*
+  .user-info {
+    margin-right: var(--default-size);
+  } */
 }
-
 .user-card input[type="checkbox"] {
-    filter: brightness(90%);
-    border: 1px solid var(--color-white);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+  filter: brightness(90%);
+  border: 1px solid var(--color-white);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .user-edit-panel {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1rem;
 }
 
 .user-actions {
-    display: flex;
-    gap: var(--avg-size);
+  display: flex;
+  gap: var(--avg-size);
 }
 
 .user-actions button span {
-    font-size: calc(var(--default-size) * 0.8);
+  font-size: calc(var(--default-size) * 0.8);
+}
+
+#addBtn {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+}
+
+#addBtn.opened {
+  animation: spin 0.5s ease 1;
+  transform: rotate(45deg);
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+.inputSect {
+  width: var(--full-width);
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  overflow: visible;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease height 0.5s ease;
+}
+
+.inputSect form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  height: calc(var(--def-height) / 7);
+  width: calc(var(--full-width) * 0.8);
+}
+
+.inputSect form div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: var(--avg-size);
+  justify-content: center;
+  align-items: flex-start;
+  width: calc(var(--full-width) * 0.7);
+}
+
+.inputSect form div:first-child input {
+  width: calc(var(--full-width) * 0.9);
+  margin: 0 var(--avg-size);
+  padding: var(--avg-size);
+  font-size: calc(var(--avg-size) * 1.3);
+  border-radius: var(--avg-size);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+}
+
+.inputSect form div:first-child input::placeholder {
+  color: var(--color-white);
+}
+
+.inputSect form div:last-child {
+  height: inherit;
+  display: inherit;
+  align-items: center;
+}
+
+.inputSect form div:last-child button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(var(--full-vw) * 0.2);
+  height: calc(var(--full-width) * 0.8);
+  border-radius: var(--avg-size);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--default-size);
+  font-weight: var(--bold);
+  border: 4px double var(--color-white);
+  cursor: pointer;
+}
+
+.inputSect form div:last-child button span {
+  font-size: calc(var(--default-size) * 1.7);
+}
+
+.inputSect form div:last-child button:hover {
+  transform: scale(0.95);
+  filter: brightness(85%);
+}
+
+.modalHolder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: var(--full-vw);
+  height: var(--def-height);
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: calc(var(--default-size) * 2);
+  border-radius: var(--default-size);
+  border: 1px solid var(--color-white);
+  max-width: 300px;
+  line-height: 2;
+}
+
+.modal p {
+  margin-bottom: var(--default-size);
+}
+
+.modal form {
+  width: var(--full-width);
+}
+
+.modal .decision {
+  width: var(--full-width);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: calc(var(--default-size) * 1.7);
+}
+
+.modal button {
+  padding: var(--avg-size);
+  border-radius: var(--avg-size);
+  border: 1px solid var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-weight: var(--bold);
+}
+
+.modal button:hover {
+  transform: scale(0.98);
+  filter: brightness(85%);
+}
+
+.modal button:last-child {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+#totalDiv {
+  font-size: var(--default-size);
+  margin-top: calc(var(--avg-size) * 3);
+  margin-bottom: calc((var(--avg-size) * 3) - (var(--avg-size) * 6));
 }
